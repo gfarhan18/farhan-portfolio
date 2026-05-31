@@ -34,17 +34,17 @@ export const profile = {
   name: "M. Farhan",
   firstName: "Farhan",
   initials: "MF",
-  title: "Full Stack Developer",
-  tagline: "5+ years building scalable web products for global clients",
+  title: "Full Stack & AI-Enabled Developer",
+  tagline: "5+ years shipping web products — amplified with modern AI workflows",
   description:
-    "I'm a Full Stack Software Engineer who helps founders and growing teams ship production-grade web applications — from elegant React & Next.js interfaces to scalable Nest.js APIs deployed on AWS. I've delivered work for international clients across the US, EU and APAC, and I love turning complex problems into clean, performant products.",
+    "I'm a Full Stack Engineer who builds production-grade apps with React, Next.js, Vue and Nest.js — and I use AI daily to ship faster, prototype smarter, and deliver features like intelligent document processing. I've helped teams across the US, EU and APAC launch platforms clients rely on every day.",
   location: "Lahore, Pakistan",
   availability: "Available for freelance & remote roles worldwide",
   email: "gfarhan18@gmail.com",
   resumeUrl: "/Farhan-resume-latest.pdf",
   socials: {
     github: "https://github.com/gfarhan18",
-    linkedin: "https://www.linkedin.com/in/farhan",
+    linkedin: "https://www.linkedin.com/in/muhammad-farhan-16033019b/",
     upwork: "https://www.upwork.com/",
     email: "mailto:gfarhan18@gmail.com",
   },
@@ -53,6 +53,7 @@ export const profile = {
     { label: "Projects Delivered", value: "40+" },
     { label: "International Clients", value: "15+" },
     { label: "Tech Stacks Mastered", value: "10+" },
+    { label: "AI-Enhanced Delivery", value: "Daily" },
   ],
 };
 
@@ -158,7 +159,7 @@ export const experiences: Experience[] = [
     location: "Remote · Global",
     period: "Dec 2023 — Feb 2026",
     highlights: [
-      "Delivered end-to-end web solutions for international clients including Accudox, Xcore and Matrix Hub.",
+      "Delivered end-to-end web solutions for international clients including Acudocx, Xcore and Matrix Hub.",
       "Built full-stack apps across React.js, Vue.js, Nest.js and Node.js — often on overlapping timelines.",
       "Architected serverless backends on AWS Lambda and containerized deployments with Docker.",
       "Integrated payment gateways, CRMs and third-party APIs to automate operations and reduce costs.",
@@ -178,65 +179,6 @@ export const experiences: Experience[] = [
       "Built and maintained RESTful APIs backed by MySQL and PostgreSQL with optimized queries.",
     ],
     tech: ["Vue.js", "Vuetify", "Tailwind", "PHP", "MySQL", "PostgreSQL"],
-  },
-];
-
-export type Project = {
-  name: string;
-  tagline: string;
-  description: string;
-  tech: string[];
-  highlights: string[];
-  accent: string;
-};
-
-export const projects: Project[] = [
-  {
-    name: "Fluencr",
-    tagline: "Creator-economy platform · Production at scale",
-    description:
-      "A high-concurrency platform serving the creator economy, with a polished React frontend and a Nest.js backend deployed across AWS Lambda and Docker.",
-    tech: [
-      "React.js",
-      "Nest.js",
-      "PostgreSQL",
-      "AWS Lambda",
-      "Docker",
-      "Freshdesk API",
-    ],
-    highlights: [
-      "Designed RESTful APIs in Nest.js that gracefully handle high-concurrency traffic.",
-      "Integrated AWS Lambda for serverless processing — reduced infra cost & improved scalability.",
-      "Containerized the full stack with Docker for consistent multi-env deployments.",
-      "Shipped a Freshdesk-powered ticketing system to automate support workflows.",
-    ],
-    accent: "from-brand-500 to-accent-500",
-  },
-  {
-    name: "ScheduaPay",
-    tagline: "Scheduling & payments SaaS",
-    description:
-      "A feature-rich scheduling and payments product with a clean Vue.js + Vuetify frontend and a performant Nest.js + PostgreSQL backend.",
-    tech: ["Vue.js", "Vuetify", "Nest.js", "PostgreSQL"],
-    highlights: [
-      "Built a responsive Vue.js + Vuetify frontend optimized for daily power users.",
-      "Developed a scalable Nest.js backend with efficient data handling and clean API design.",
-      "Optimized query patterns and PostgreSQL schemas for predictable performance under load.",
-    ],
-    accent: "from-emerald-400 to-brand-500",
-  },
-  {
-    name: "Dualnet",
-    tagline: "Real-time analytics & automated reporting",
-    description:
-      "A real-time data visualization dashboard with automated government-format PDF generation, deployed via Docker on Plesk-managed servers.",
-    tech: ["React.js", "Node.js", "Express", "MySQL", "Docker", "Plesk"],
-    highlights: [
-      "Built a real-time analytics dashboard delivering actionable business insights.",
-      "Automated government-format PDF generation — eliminated manual data entry.",
-      "Containerized the full stack with Docker for reliable Plesk-based deployments.",
-    ],
-    accent: "from-amber-400 to-pink-500",
   },
 ];
 
@@ -260,9 +202,9 @@ export const services = [
     icon: "cloud",
   },
   {
-    title: "Performance & Refactors",
+    title: "AI Features & Workflows",
     description:
-      "Audit existing codebases, fix bottlenecks, modernize architecture and improve developer experience.",
+      "Intelligent document extraction, AI-assisted product features, and modern dev workflows that boost velocity without sacrificing quality.",
     icon: "perf",
   },
 ];

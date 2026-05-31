@@ -15,7 +15,7 @@ export default function Experience() {
       />
 
       <div className="relative mx-auto max-w-4xl">
-        <div className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-brand-500/60 via-white/10 to-transparent md:left-1/2 md:-translate-x-1/2" />
+        <div className="absolute bottom-2 left-4 top-2 w-px bg-gradient-to-b from-brand-500/60 via-slate-300 to-transparent dark:via-white/10 md:left-1/2 md:-translate-x-1/2" />
 
         <ul className="space-y-10">
           {experiences.map((exp, idx) => {
@@ -30,10 +30,10 @@ export default function Experience() {
                 className="relative grid grid-cols-[2.5rem_1fr] gap-4 md:grid-cols-2 md:gap-12"
               >
                 <div className="relative flex justify-center md:hidden">
-                  <span className="absolute top-2 h-3.5 w-3.5 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 ring-4 ring-ink-950" />
+                  <span className="ring-page absolute top-2 h-3.5 w-3.5 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 ring-4" />
                 </div>
 
-                <span className="absolute left-1/2 top-6 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 ring-4 ring-ink-950 md:block" />
+                <span className="ring-page absolute left-1/2 top-6 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 ring-4 md:block" />
 
                 {isLeft ? (
                   <>
@@ -69,16 +69,16 @@ function ExperienceCard({
       }`}
     >
       <div className="flex flex-wrap items-center gap-2">
-        <h3 className="font-display text-lg font-bold text-white">
+        <h3 className="text-primary font-display text-lg font-bold">
           {exp.role}
         </h3>
-        <span className="text-slate-500">·</span>
-        <span className="text-sm font-medium text-brand-300">
+        <span className="text-slate-400">·</span>
+        <span className="text-sm font-medium text-brand-600 dark:text-brand-300">
           {exp.company}
         </span>
       </div>
 
-      <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
+      <div className="text-muted mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
         <span className="inline-flex items-center gap-1.5">
           <HiOutlineCalendar className="h-3.5 w-3.5" />
           {exp.period}
@@ -93,7 +93,7 @@ function ExperienceCard({
         {exp.highlights.map((h) => (
           <li
             key={h}
-            className="flex gap-3 text-sm leading-relaxed text-slate-300"
+            className="text-secondary flex gap-3 text-sm leading-relaxed"
           >
             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-br from-brand-400 to-accent-500" />
             <span>{h}</span>

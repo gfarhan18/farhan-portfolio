@@ -25,18 +25,18 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6 }}
-        className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.05] to-white/[0.02] p-8 backdrop-blur-xl lg:p-14"
+        className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-subtle bg-gradient-to-br from-white to-slate-50 p-8 backdrop-blur-xl dark:from-white/[0.05] dark:to-white/[0.02] lg:p-14"
       >
-        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-brand-500/20 blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-accent-500/20 blur-3xl" />
+        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-brand-500/15 blur-3xl dark:bg-brand-500/20" />
+        <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-accent-500/15 blur-3xl dark:bg-accent-500/20" />
 
         <div className="relative grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div>
-            <h3 className="font-display text-3xl font-bold text-white sm:text-4xl">
+            <h3 className="text-primary font-display text-3xl font-bold sm:text-4xl">
               Let&apos;s build something{" "}
               <span className="text-gradient">remarkable</span> together.
             </h3>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-300">
+            <p className="text-secondary mt-4 max-w-xl text-base leading-relaxed">
               Whether you need a complete product built from scratch, a senior
               engineer to join your team, or a trusted partner to scale your
               platform — I&apos;d love to hear about it.
@@ -116,7 +116,7 @@ function SocialLink({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-300 transition-all hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06] hover:text-white"
+      className="text-secondary grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:border-white/25 dark:hover:bg-white/[0.06] dark:hover:text-white"
     >
       <Icon className="h-5 w-5" />
     </a>
@@ -136,20 +136,20 @@ function InfoCard({
 }) {
   const inner = (
     <>
-      <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-300 ring-1 ring-inset ring-white/10">
+      <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-600 ring-1 ring-inset ring-slate-200 dark:text-brand-300 dark:ring-white/10">
         <Icon className="h-5 w-5" />
       </div>
       <div>
-        <div className="text-[10px] font-medium uppercase tracking-wider text-slate-400">
+        <div className="text-muted text-[10px] font-medium uppercase tracking-wider">
           {title}
         </div>
-        <div className="mt-0.5 text-sm font-medium text-white">{value}</div>
+        <div className="text-primary mt-0.5 text-sm font-medium">{value}</div>
       </div>
     </>
   );
 
   const className =
-    "flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all hover:border-white/20 hover:bg-white/[0.06]";
+    "flex items-center gap-4 rounded-2xl border border-subtle surface-faint p-4 transition-all hover:border-slate-300 hover:bg-slate-100 dark:hover:border-white/20 dark:hover:bg-white/[0.06]";
 
   return href ? (
     <a href={href} className={className}>

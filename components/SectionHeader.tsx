@@ -21,7 +21,7 @@ export default function SectionHeader({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`mb-14 flex flex-col gap-4 ${
+      className={`mb-8 flex flex-col gap-3 ${
         align === "center" ? "items-center text-center" : "items-start text-left"
       }`}
     >
@@ -30,7 +30,7 @@ export default function SectionHeader({
         <span className="text-gradient">{title}</span>
       </h2>
       {description && (
-        <p className="max-w-2xl text-base leading-relaxed text-slate-400">
+        <p className="text-muted max-w-2xl text-base leading-relaxed">
           {description}
         </p>
       )}

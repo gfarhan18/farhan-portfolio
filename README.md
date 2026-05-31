@@ -8,9 +8,11 @@ A modern, responsive, animated portfolio website for **M. Farhan**, Full Stack D
 - Smooth scroll, fully responsive layout (mobile → 4K)
 - Animated hero with floating tech chips and live availability indicator
 - Sections: Hero, Marquee, About, Skills, Experience timeline, Projects, Contact, Footer
+- Project category filters (All / Frontend / Full Stack / Backend) with tech icon tags
+- Dev-only admin form at `/project-form` to add projects locally
 - CTAs everywhere — Download Resume, Email, GitHub, LinkedIn
 - SEO meta tags, Open Graph and Twitter cards out of the box
-- 100% typed (TypeScript) and easy to update — all content lives in `lib/data.ts`
+- 100% typed (TypeScript)
 
 ## Tech Stack
 
@@ -31,7 +33,16 @@ A modern, responsive, animated portfolio website for **M. Farhan**, Full Stack D
 npm install
 ```
 
-### 2. Run the dev server
+### 2. Configure admin form (optional, for local dev)
+
+Copy `.env.local.example` to `.env.local` and set:
+
+```env
+ADMIN_PASSWORD=your-secure-password
+ADMIN_SESSION_SECRET=any-long-random-string
+```
+
+### 3. Run the dev server
 
 ```bash
 npm run dev
@@ -39,7 +50,7 @@ npm run dev
 
 Open <http://localhost:3000> to see the site.
 
-### 3. Build for production
+### 4. Build for production
 
 ```bash
 npm run build
@@ -51,60 +62,87 @@ npm start
 ```
 .
 ├── app/
-│   ├── globals.css        # Tailwind layers + custom utilities
-│   ├── layout.tsx         # Root layout, fonts, SEO metadata
-│   ├── page.tsx           # Composes all sections
-│   └── not-found.tsx      # Custom 404
+│   ├── api/
+│   │   ├── admin/login/   # Password login (dev only)
+│   │   └── projects/      # GET projects, POST new (dev only)
+│   ├── project-form/      # Admin UI to add projects locally
+│   ├── opengraph-image.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── not-found.tsx
 ├── components/
-│   ├── Navbar.tsx
-│   ├── Background.tsx
-│   ├── Hero.tsx
-│   ├── Marquee.tsx
-│   ├── SectionHeader.tsx
-│   ├── About.tsx
-│   ├── Skills.tsx
-│   ├── Experience.tsx
+│   ├── ProjectCard.tsx
+│   ├── ProjectCategoryFilter.tsx
+│   ├── ProjectForm.tsx
 │   ├── Projects.tsx
-│   ├── Contact.tsx
-│   └── Footer.tsx
+│   └── …
+├── data/
+│   └── projects.json      # All portfolio projects
 ├── lib/
-│   └── data.ts            # All content (profile, skills, projects, experience)
+│   ├── data.ts            # Profile, skills, experience, services
+│   ├── project-types.ts   # Project types and JSON reader
+│   └── projects-server.ts # File writes (API routes only)
+│   └── tech-icons.ts      # Tech name → SVG icon map
 ├── public/
+│   ├── projects/          # Project screenshots
 │   └── Farhan-resume-latest.pdf
-├── tailwind.config.ts
-├── next.config.mjs
-├── tsconfig.json
-└── package.json
+└── …
 ```
 
-## Editing Content
+## Adding Projects
 
-All copy, links and lists live in **`lib/data.ts`**:
+### Option A — Local admin form (recommended)
 
-- `profile` — name, tagline, description, contact links, hero stats
-- `skillCategories` — tech stack grouped by Frontend / Backend / Cloud & DevOps / Databases & Tools
-- `experiences` — companies, roles, bullets, tech used
-- `projects` — featured work with descriptions, highlights and tech
-- `services` — what you offer to clients
+1. Run `npm run dev`
+2. Open <http://localhost:3000/project-form>
+3. Sign in with `ADMIN_PASSWORD`
+4. Fill in project details and upload a screenshot
+5. Commit and push to deploy:
 
-Update those arrays and the UI updates everywhere automatically. The resume PDF should live at `public/Farhan-resume-latest.pdf` (already in place).
+```bash
+git add data/projects.json public/projects/
+git commit -m "Add project: My App"
+git push
+```
 
-## Customization Tips
+The form **only works in local dev** — production hosts cannot write to the filesystem.
 
-- **Theme colors**: edit `tailwind.config.ts` → `colors.brand` / `colors.accent`
-- **Fonts**: swap in `app/layout.tsx`
-- **Add a project**: append to the `projects` array in `lib/data.ts`
-- **Add a section**: create a component in `components/` and import it in `app/page.tsx`
+### Option B — Edit JSON manually
+
+1. Add an entry to `data/projects.json`
+2. Drop a screenshot in `public/projects/` and set `"image": "/projects/your-file.png"`
+3. Commit and push
+
+### Project JSON fields
+
+| Field | Type | Notes |
+|-------|------|-------|
+| `id` | string | URL slug, e.g. `"my-app"` |
+| `name` | string | Display name |
+| `tagline` | string | Short subtitle |
+| `description` | string | Card description |
+| `category` | string | `"frontend"`, `"fullstack"`, or `"backend"` |
+| `tech` | string[] | Tech stack labels (matched to icons in `lib/tech-icons.ts`) |
+| `highlights` | string[] | Bullet points |
+| `accent` | string | Tailwind gradient classes |
+| `image` | string | Path under `public/`, e.g. `"/projects/my-app.png"` |
+| `liveUrl` | string | Optional live demo link |
+| `githubUrl` | string | Optional GitHub link |
+
+## Editing Other Content
+
+Profile, skills, experience and services live in **`lib/data.ts`**.
+
+The resume PDF should live at `public/Farhan-resume-latest.pdf`.
 
 ## Deployment
 
-The simplest path is **[Vercel](https://vercel.com/)** (built by the Next.js team):
+Deploy to **[Vercel](https://vercel.com/)**:
 
 1. Push this repo to GitHub
-2. Import it on Vercel — defaults work out of the box
-3. Done. You get a global CDN, HTTPS and instant deploys on every push.
-
-It also deploys cleanly to **Netlify**, **Render** or any Node host that supports Next.js.
+2. Import on Vercel — defaults work out of the box
+3. Projects and images deploy from `data/projects.json` and `public/projects/`
 
 ## License
 

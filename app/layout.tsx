@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import ThemeScript from "@/components/ThemeScript";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,11 +25,11 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://farhan.dev"),
   title: {
-    default: "M. Farhan · Full Stack Developer",
+    default: "M. Farhan · Full Stack & AI-Enabled Developer",
     template: "%s · M. Farhan",
   },
   description:
-    "M. Farhan — Full Stack Developer with 5+ years building scalable web products in React, Next.js, Nest.js, Node.js and AWS for international clients.",
+    "M. Farhan — Full Stack & AI-enabled developer building React, Next.js, Vue and Nest.js products. AI integrations, faster delivery, production-grade apps for global clients.",
   keywords: [
     "Full Stack Developer",
     "React Developer",
@@ -73,10 +75,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable}`}
+      suppressHydrationWarning
+      className={`dark ${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable}`}
     >
-      <body className="relative min-h-screen overflow-x-hidden bg-ink-950 text-slate-100 antialiased">
-        {children}
+      <body className="relative min-h-screen overflow-x-hidden antialiased">
+        <ThemeScript />
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

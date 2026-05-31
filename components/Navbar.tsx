@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineDownload, HiMenuAlt3, HiX } from "react-icons/hi";
 import { profile } from "@/lib/data";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -27,9 +28,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-white/10 bg-ink-950/70 backdrop-blur-xl"
-          : "bg-transparent"
+        scrolled ? "nav-scrolled" : "bg-transparent"
       }`}
     >
       <nav className="container-px flex h-16 items-center justify-between">
@@ -40,9 +39,9 @@ export default function Navbar() {
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-sm font-bold text-white shadow-glow transition-transform group-hover:scale-105">
             {profile.initials}
           </span>
-          <span className="hidden text-white sm:inline-block">
+          <span className="text-primary hidden sm:inline-block">
             {profile.firstName}
-            <span className="text-brand-400">.</span>
+            <span className="text-brand-600 dark:text-brand-400">.</span>
           </span>
         </a>
 
@@ -51,7 +50,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                className="text-secondary rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-white/5 dark:hover:text-white"
               >
                 {link.label}
               </a>
@@ -60,6 +59,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <a
             href={profile.resumeUrl}
             target="_blank"
@@ -71,13 +71,16 @@ export default function Navbar() {
           </a>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          onClick={() => setOpen((p) => !p)}
-          className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[0.04] text-white md:hidden"
-        >
-          {open ? <HiX className="h-5 w-5" /> : <HiMenuAlt3 className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            aria-label="Toggle menu"
+            onClick={() => setOpen((p) => !p)}
+            className="text-primary grid h-10 w-10 place-items-center rounded-xl border border-subtle surface-faint"
+          >
+            {open ? <HiX className="h-5 w-5" /> : <HiMenuAlt3 className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -87,7 +90,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-white/10 bg-ink-950/95 backdrop-blur-xl md:hidden"
+            className="overflow-hidden border-t border-subtle bg-white/95 backdrop-blur-xl dark:bg-ink-950/95 md:hidden"
           >
             <ul className="container-px flex flex-col gap-1 py-4">
               {navLinks.map((link) => (
@@ -95,7 +98,7 @@ export default function Navbar() {
                   <a
                     onClick={() => setOpen(false)}
                     href={link.href}
-                    className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                    className="text-secondary block rounded-xl px-4 py-3 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-white/5 dark:hover:text-white"
                   >
                     {link.label}
                   </a>

@@ -25,26 +25,26 @@ export default function Skills() {
           >
             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand-500/10 blur-3xl" />
             <div className="flex items-baseline justify-between">
-              <h3 className="font-display text-xl font-bold text-white">
+              <h3 className="text-primary font-display text-xl font-bold">
                 {cat.title}
               </h3>
               <span className="text-xs font-medium text-slate-500">
                 {cat.skills.length} tools
               </span>
             </div>
-            <p className="mt-2 text-sm text-slate-400">{cat.description}</p>
+            <p className="text-muted mt-2 text-sm">{cat.description}</p>
 
             <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
               {cat.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/[0.02] px-3 py-2.5 transition-all hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.06]"
+                  className="group flex items-center gap-2.5 rounded-xl border border-subtle bg-slate-50 px-3 py-2.5 transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white dark:bg-white/[0.02] dark:hover:border-white/20 dark:hover:bg-white/[0.06]"
                 >
                   <skill.Icon
                     className="h-5 w-5 shrink-0 transition-transform group-hover:scale-110"
                     style={{ color: skill.color }}
                   />
-                  <span className="truncate text-sm font-medium text-slate-200">
+                  <span className="text-secondary truncate text-sm font-medium">
                     {skill.name}
                   </span>
                 </div>

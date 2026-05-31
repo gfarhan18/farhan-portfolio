@@ -1,0 +1,374 @@
+[
+  {
+    "id": "acudocx",
+    "name": "Acudocx",
+    "tagline": "AI-powered clinical document platform",
+    "description": "Full-stack healthcare platform with AI document extraction, structured data capture, and workflow automation for clinical teams.",
+    "category": "fullstack",
+    "tech": ["Vue.js", "Nest.js", "PostgreSQL", "TypeScript", "AI"],
+    "highlights": [
+      "Built AI-driven document extraction and processing pipelines for clinical operations.",
+      "Shipped secure APIs and dashboards for review, validation, and downstream workflows."
+    ],
+    "accent": "from-violet-400 to-purple-500",
+    "image": "/projects/placeholder.svg",
+    "liveUrl": "https://acudocx.com/",
+    "githubUrl": "",
+    "featured": true
+  },
+  {
+    "id": "matrixhub-iot",
+    "name": "MatrixHub IoT",
+    "tagline": "IoT operations portal · Vue + Nest.js",
+    "description": "Full-stack portal for monitoring and managing connected devices, with real-time data views and role-based access.",
+    "category": "fullstack",
+    "tech": ["Vue.js", "Nest.js", "PostgreSQL", "TypeScript"],
+    "highlights": [
+      "Developed device dashboards and admin flows for distributed IoT deployments.",
+      "Designed scalable Nest.js APIs for telemetry, alerts, and user management."
+    ],
+    "accent": "from-cyan-400 to-blue-500",
+    "image": "/projects/placeholder.svg",
+    "liveUrl": "https://portal.matrixhub.com.au/",
+    "githubUrl": "",
+    "featured": true
+  },
+  {
+    "id": "real-deals",
+    "name": "Real Deals",
+    "tagline": "Boutique albums · React / Next.js",
+    "description": "Modern e-commerce experience for boutique photo albums with fast browsing, merchandising, and conversion-focused UX.",
+    "category": "frontend",
+    "tech": ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+    "highlights": [
+      "Built a performant storefront with polished product discovery and checkout paths.",
+      "Optimized UI for merchandising updates and mobile-first shoppers."
+    ],
+    "accent": "from-brand-500 to-accent-500",
+    "image": "/projects/placeholder.svg",
+    "liveUrl": "https://boutiquealbums.realdeals.net/",
+    "githubUrl": "",
+    "featured": true
+  },
+  {
+    "id": "focus-v2",
+    "name": "Focus V2",
+    "tagline": "Product platform · Vue + Nest.js",
+    "description": "Next-generation full-stack product build with modular Vue frontends and Nest.js services for growing feature scope.",
+    "category": "fullstack",
+    "tech": ["Vue.js", "Nest.js", "PostgreSQL", "TypeScript"],
+    "highlights": [
+      "Led V2 architecture for cleaner domain boundaries and faster feature delivery.",
+      "Integrated AI-assisted development practices to accelerate iteration cycles."
+    ],
+    "accent": "from-emerald-400 to-brand-500",
+    "image": "/projects/placeholder.svg",
+    "liveUrl": "",
+    "githubUrl": "",
+    "featured": true
+  },
+  {
+    "id": "fluencr",
+    "name": "Fluencr",
+    "tagline": "Creator-economy platform",
+    "description": "High-traffic creator platform with React UI, Nest.js APIs, PostgreSQL, and AWS Lambda + Docker deployments.",
+    "category": "fullstack",
+    "tech": ["React.js", "Nest.js", "PostgreSQL", "AWS Lambda", "Docker"],
+    "highlights": [
+      "Scaled REST APIs for concurrent creator workflows and integrations.",
+      "Deployed serverless and containerized services across environments."
+    ],
+    "accent": "from-brand-500 to-accent-500",
+    "image": "/projects/placeholder.svg",
+    "liveUrl": "",
+    "githubUrl": ""
+  },
+  {
+    "id": "scheduapay",
+    "name": "ScheduaPay",
+    "tagline": "Scheduling & payments SaaS",
+    "description": "Scheduling and payments product with Vue + Vuetify frontend and Nest.js + PostgreSQL backend.",
+    "category": "fullstack",
+    "tech": ["Vue.js", "Vuetify", "Nest.js", "PostgreSQL"],
+    "highlights": [
+      "Shipped daily-use scheduling UI with reliable payment flows.",
+      "Tuned database schemas for predictable performance under load."
+    ],
+    "accent": "from-emerald-400 to-brand-500",
+    "image": "/projects/placeholder.svg",
+    "liveUrl": "",
+    "githubUrl": ""
+  },
+  {
+    "id": "dualnet",
+    "name": "Dualnet",
+    "tagline": "Analytics & automated reporting",
+    "description": "Real-time analytics dashboard with automated PDF reporting, Node/Express APIs, and Docker on Plesk.",
+    "category": "fullstack",
+    "tech": ["React.js", "Node.js", "Express.js", "MySQL", "Docker"],
+    "highlights": [
+      "Delivered live dashboards for operational decision-making.",
+      "Automated government-format PDF generation end to end."
+    ],
+    "accent": "from-amber-400 to-pink-500",
+    "image": "/projects/placeholder.svg",
+    "liveUrl": "",
+    "githubUrl": ""
+  },
+  {
+    "id": "inet-media",
+    "name": "INet Media",
+    "tagline": "Digital agency website",
+    "description": "Agency site showcasing services, portfolio, and lead-generation paths for Canadian businesses.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Conversion-focused layout with clear service positioning.",
+      "Fully responsive marketing site ready for campaigns."
+    ],
+    "accent": "from-cyan-400 to-blue-500",
+    "image": "/projects/inet-media-hero.png",
+    "liveUrl": "https://inet-media.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "summit-property-group",
+    "name": "Summit Property Group",
+    "tagline": "Commercial real estate",
+    "description": "Property-group website with listings, company story, and inquiry flows for Alberta commercial clients.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Structured listings for quick mobile and desktop browsing.",
+      "Clear CTAs for property discovery and contact."
+    ],
+    "accent": "from-violet-400 to-purple-500",
+    "image": "/projects/summit-properties-hero.png",
+    "liveUrl": "https://summitpropertygroup.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "stemaid-institute",
+    "name": "StemAid Institute",
+    "tagline": "Regenerative medicine",
+    "description": "Clinical institute site for stem-cell therapy services, education, and patient trust-building content.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Approachable medical content architecture.",
+      "Accessible, mobile-first patient experience."
+    ],
+    "accent": "from-emerald-400 to-brand-500",
+    "image": "/projects/stemaid-hero.png",
+    "liveUrl": "https://stemaidinstitute.com/",
+    "githubUrl": ""
+  },
+  {
+    "id": "umbrella-homecare",
+    "name": "Umbrella Home Care",
+    "tagline": "In-home care services",
+    "description": "Care services website with offerings, service areas, and family-friendly intake and contact flows.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Built caregiver-focused pages and inquiry paths.",
+      "Optimized for local discovery and conversions."
+    ],
+    "accent": "from-rose-400 to-orange-500",
+    "image": "/projects/umbrella-home-care-hero.png",
+    "liveUrl": "https://umbrellahomecare.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "lakeview-dental",
+    "name": "Lakeview Dental Center",
+    "tagline": "Family & cosmetic dentistry",
+    "description": "Dental practice site with treatments, team profiles, and appointment-focused CTAs.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Patient journey–oriented page structure.",
+      "Mobile-first layout for local search traffic."
+    ],
+    "accent": "from-cyan-400 to-blue-500",
+    "image": "/projects/lakeview-dental-hero.png",
+    "liveUrl": "https://lakeviewdentalcenter.com/",
+    "githubUrl": ""
+  },
+  {
+    "id": "dr-schlee",
+    "name": "Dr. Schlee",
+    "tagline": "Practice website",
+    "description": "Professional practice site with services, credentials, and contact options for patients.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Credibility-focused content layout.",
+      "Responsive design across devices."
+    ],
+    "accent": "from-brand-500 to-accent-500",
+    "image": "/projects/drschlee-hero.png",
+    "liveUrl": "https://drschlee.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "aspen-auto-glass",
+    "name": "Aspen Auto Glass",
+    "tagline": "Auto glass services",
+    "description": "Local service site for windshield repair and replacement with quote request flows.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Quote-first conversion layout.",
+      "Clear service and coverage presentation."
+    ],
+    "accent": "from-amber-400 to-pink-500",
+    "image": "/projects/aspen-auto-glass-hero.png",
+    "liveUrl": "https://aspenautoglass.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "inner-city-diesel",
+    "name": "Inner City Diesel",
+    "tagline": "ICD Group Ltd",
+    "description": "Industrial corporate site for fleet services, capabilities, and B2B lead capture.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Strong industrial brand positioning.",
+      "B2B-friendly information architecture."
+    ],
+    "accent": "from-emerald-400 to-brand-500",
+    "image": "/projects/inner-city-diesel-hero.png",
+    "liveUrl": "https://icdgroupltd.com/",
+    "githubUrl": ""
+  },
+  {
+    "id": "red-tail-industries",
+    "name": "Red Tail Industries",
+    "tagline": "Industrial solutions",
+    "description": "Full company site for services, credibility content, and industrial client inquiries.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Multi-section industrial marketing site.",
+      "Performance-minded responsive build."
+    ],
+    "accent": "from-rose-400 to-orange-500",
+    "image": "/projects/red-tail-hero.png",
+    "liveUrl": "https://redtailindustries.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "iniskim",
+    "name": "Iniskim",
+    "tagline": "Business web presence",
+    "description": "Brand site with services, storytelling, and contact flows for partners and clients.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Clear service and company narrative.",
+      "Marketing-ready responsive implementation."
+    ],
+    "accent": "from-cyan-400 to-blue-500",
+    "image": "/projects/iniskim-hero.png",
+    "liveUrl": "https://iniskim.com/",
+    "githubUrl": ""
+  },
+  {
+    "id": "shield-storage",
+    "name": "Shield Storage",
+    "tagline": "Self-storage",
+    "description": "Storage facility site with units, locations, and rental inquiry paths.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Location and unit-type highlights.",
+      "Mobile-friendly local SEO structure."
+    ],
+    "accent": "from-violet-400 to-purple-500",
+    "image": "/projects/shield-storage-hero.png",
+    "liveUrl": "https://shieldstorage.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "negotiations-ninja",
+    "name": "Negotiations Ninja",
+    "tagline": "Training & resources",
+    "description": "Brand site for negotiation programs, resources, and business audience engagement.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Program and resource discovery layout.",
+      "Lead capture across content pages."
+    ],
+    "accent": "from-amber-400 to-brand-500",
+    "image": "/projects/negotiations-ninja-hero.png",
+    "liveUrl": "https://www.negotiations.ninja/",
+    "githubUrl": ""
+  },
+  {
+    "id": "eyewear-experts",
+    "name": "Eyewear Experts",
+    "tagline": "Optical retail · Red Deer",
+    "description": "Retail optical site for frames, services, and store information.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Product and service showcase for local shoppers.",
+      "Mobile-first retail experience."
+    ],
+    "accent": "from-emerald-400 to-brand-500",
+    "image": "/projects/eye-wear-hero.png",
+    "liveUrl": "https://eyewearexpertsreddeer.ca/",
+    "githubUrl": ""
+  },
+  {
+    "id": "saint-george-care",
+    "name": "Saint George Care",
+    "tagline": "Healthcare services",
+    "description": "Care programs and facility information for families researching support options.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Compassionate healthcare UX patterns.",
+      "Accessible content for families."
+    ],
+    "accent": "from-rose-400 to-pink-500",
+    "image": "/projects/saint-george-hero.png",
+    "liveUrl": "https://stgcare.com/",
+    "githubUrl": ""
+  },
+  {
+    "id": "accurate-western-scale",
+    "name": "Accurate Western Scale",
+    "tagline": "Weighing solutions",
+    "description": "B2B site for industrial weighing products, services, and inquiries.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "Product and service category clarity.",
+      "Field- and office-friendly responsive layout."
+    ],
+    "accent": "from-cyan-400 to-blue-500",
+    "image": "/projects/accurate-western-scale-hero.png",
+    "liveUrl": "https://accuratewesternscale.com/",
+    "githubUrl": ""
+  },
+  {
+    "id": "brooks-industrial-metals",
+    "name": "Brooks Industrial Metals",
+    "tagline": "Metal supply",
+    "description": "Industrial metals company site with products, capabilities, and B2B contact paths.",
+    "category": "frontend",
+    "tech": ["JavaScript", "Tailwind CSS", "PHP"],
+    "highlights": [
+      "B2B lead-oriented content structure.",
+      "Fast, responsive corporate presence."
+    ],
+    "accent": "from-brand-500 to-accent-500",
+    "image": "/projects/brooks-industrial-hero.png",
+    "liveUrl": "https://brooksindustrialmetals.com/",
+    "githubUrl": ""
+  }
+]

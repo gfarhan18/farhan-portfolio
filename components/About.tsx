@@ -23,7 +23,7 @@ export default function About() {
       <SectionHeader
         eyebrow="About me"
         title="A senior full-stack partner for ambitious teams"
-        description="I help startups and scale-ups turn ideas into production-grade web platforms — with code that's clean, infra that's predictable, and UX that converts."
+        description="Full-stack delivery with modern AI in the loop — from intelligent product features to faster, higher-quality shipping."
       />
 
       <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
@@ -34,32 +34,33 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="glass p-8 lg:p-10"
         >
-          <p className="text-base leading-relaxed text-slate-300 lg:text-lg">
+          <p className="text-secondary text-base leading-relaxed lg:text-lg">
             I&apos;m{" "}
-            <span className="font-semibold text-white">{profile.name}</span>, a
+            <span className="text-primary font-semibold">{profile.name}</span>, a
             Full Stack Developer based in {profile.location} with{" "}
-            <span className="font-semibold text-white">
+            <span className="text-primary font-semibold">
               5+ years of hands-on experience
             </span>{" "}
             shipping production software for international clients.
           </p>
-          <p className="mt-5 text-base leading-relaxed text-slate-400">
+          <p className="text-muted mt-5 text-base leading-relaxed">
             I&apos;ve partnered with teams across the US, EU and APAC — including
-            <span className="text-white"> Accudox</span>,
-            <span className="text-white"> Xcore</span>,
-            <span className="text-white"> Matrix Hub</span> and
-            <span className="text-white"> Fluencr</span> — delivering full
+            <span className="text-primary"> Acudocx</span>,
+            <span className="text-primary"> Xcore</span>,
+            <span className="text-primary"> Matrix Hub</span> and
+            <span className="text-primary"> Fluencr</span> — delivering full
             product lifecycles: from requirement gathering and architecture, to
             development, deployment and ongoing maintenance.
           </p>
-          <p className="mt-5 text-base leading-relaxed text-slate-400">
-            My sweet spot is the{" "}
-            <span className="text-brand-300">
+          <p className="text-muted mt-5 text-base leading-relaxed">
+            My sweet spot is{" "}
+            <span className="text-brand-600 dark:text-brand-300">
               React / Next.js + Nest.js + AWS
-            </span>{" "}
-            stack — but I&apos;m equally comfortable in Vue.js, Node.js, Laravel
-            or PHP. I write code that&apos;s easy to read, easy to deploy and
-            easy to evolve.
+            </span>
+            , with strong Vue.js and PHP experience. I use AI tools daily for
+            prototyping, refactors, and shipping features like{" "}
+            <span className="text-primary">document intelligence on Acudocx</span>
+            — so teams move faster without cutting corners.
           </p>
 
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -81,13 +82,13 @@ export default function About() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="glass glass-hover p-6"
               >
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-300 ring-1 ring-inset ring-white/10">
+                <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-600 ring-1 ring-inset ring-slate-200 dark:text-brand-300 dark:ring-white/10">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-white">
+                <h3 className="text-primary mt-4 font-display text-lg font-semibold">
                   {s.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                <p className="text-muted mt-2 text-sm leading-relaxed">
                   {s.description}
                 </p>
               </motion.div>
@@ -101,11 +102,11 @@ export default function About() {
 
 function Pill({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-      <div className="text-[10px] font-medium uppercase tracking-wider text-slate-400">
+    <div className="rounded-xl border border-subtle surface-faint px-4 py-3">
+      <div className="text-muted text-[10px] font-medium uppercase tracking-wider">
         {label}
       </div>
-      <div className="mt-1 text-sm font-semibold text-white">{value}</div>
+      <div className="text-primary mt-1 text-sm font-semibold">{value}</div>
     </div>
   );
 }
