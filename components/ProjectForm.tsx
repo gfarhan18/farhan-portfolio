@@ -348,7 +348,7 @@ function Field({
         {label}
         {required && <span className="text-brand-600 dark:text-brand-400"> *</span>}
       </label>
-      {hint && <p className="mb-2 text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="mb-2 text-xs text-stone-500">{hint}</p>}
       {children}
     </div>
   );

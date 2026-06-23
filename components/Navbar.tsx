@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -50,7 +51,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-secondary rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-white/5 dark:hover:text-white"
+                className="text-secondary rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-stone-100 hover:text-stone-900 dark:hover:bg-white/5 dark:hover:text-white"
               >
                 {link.label}
               </a>
@@ -98,7 +99,7 @@ export default function Navbar() {
                   <a
                     onClick={() => setOpen(false)}
                     href={link.href}
-                    className="text-secondary block rounded-xl px-4 py-3 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-white/5 dark:hover:text-white"
+                    className="text-secondary block rounded-xl px-4 py-3 text-sm font-medium transition-colors hover:bg-stone-100 hover:text-stone-900 dark:hover:bg-white/5 dark:hover:text-white"
                   >
                     {link.label}
                   </a>

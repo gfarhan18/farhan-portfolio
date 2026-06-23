@@ -82,7 +82,7 @@ export default function About() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="glass glass-hover p-6"
               >
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-600 ring-1 ring-inset ring-slate-200 dark:text-brand-300 dark:ring-white/10">
+                <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-600 ring-1 ring-inset ring-stone-200 dark:text-brand-300 dark:ring-white/10">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-primary mt-4 font-display text-lg font-semibold">

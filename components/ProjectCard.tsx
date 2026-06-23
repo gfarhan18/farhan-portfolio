@@ -65,7 +65,7 @@ export default function ProjectCard({
             className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
           />
           {!compact && (
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent dark:from-ink-950/80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent dark:from-ink-950/80" />
           )}
         </div>
       )}
