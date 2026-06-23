@@ -28,7 +28,7 @@ export default function Skills() {
               <h3 className="text-primary font-display text-xl font-bold">
                 {cat.title}
               </h3>
-              <span className="text-xs font-medium text-slate-500">
+              <span className="text-xs font-medium text-stone-500">
                 {cat.skills.length} tools
               </span>
             </div>
@@ -38,7 +38,7 @@ export default function Skills() {
               {cat.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group flex items-center gap-2.5 rounded-xl border border-subtle bg-slate-50 px-3 py-2.5 transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white dark:bg-white/[0.02] dark:hover:border-white/20 dark:hover:bg-white/[0.06]"
+                  className="group flex items-center gap-2.5 rounded-xl border border-subtle bg-stone-50 px-3 py-2.5 transition-all hover:-transtone-y-0.5 hover:border-stone-300 hover:bg-white dark:bg-white/[0.02] dark:hover:border-white/20 dark:hover:bg-white/[0.06]"
                 >
                   <skill.Icon
                     className="h-5 w-5 shrink-0 transition-transform group-hover:scale-110"

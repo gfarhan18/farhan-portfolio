@@ -15,7 +15,7 @@ export default function Experience() {
       />
 
       <div className="relative mx-auto max-w-4xl">
-        <div className="absolute bottom-2 left-4 top-2 w-px bg-gradient-to-b from-brand-500/60 via-slate-300 to-transparent dark:via-white/10 md:left-1/2 md:-translate-x-1/2" />
+        <div className="absolute bottom-2 left-4 top-2 w-px bg-gradient-to-b from-brand-500/60 via-stone-300 to-transparent dark:via-white/10 md:left-1/2 md:-transtone-x-1/2" />
 
         <ul className="space-y-10">
           {experiences.map((exp, idx) => {
@@ -33,7 +33,7 @@ export default function Experience() {
                   <span className="ring-page absolute top-2 h-3.5 w-3.5 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 ring-4" />
                 </div>
 
-                <span className="ring-page absolute left-1/2 top-6 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 ring-4 md:block" />
+                <span className="ring-page absolute left-1/2 top-6 hidden h-3.5 w-3.5 -transtone-x-1/2 rounded-full bg-gradient-to-br from-brand-400 to-accent-500 ring-4 md:block" />
 
                 {isLeft ? (
                   <>
@@ -72,7 +72,7 @@ function ExperienceCard({
         <h3 className="text-primary font-display text-lg font-bold">
           {exp.role}
         </h3>
-        <span className="text-slate-400">·</span>
+        <span className="text-stone-400">·</span>
         <span className="text-sm font-medium text-brand-600 dark:text-brand-300">
           {exp.company}
         </span>

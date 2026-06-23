@@ -182,6 +182,50 @@ export const experiences: Experience[] = [
   },
 ];
 
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  initials: string;
+};
+
+// NOTE: Replace these sample testimonials with real client quotes.
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Farhan took our document-processing idea and turned it into a production platform our clinical teams now rely on daily. He owns problems end to end and ships with a level of polish that's rare in contractors.",
+    name: "Sarah Whitfield",
+    role: "Product Lead",
+    company: "Acudocx",
+    initials: "SW",
+  },
+  {
+    quote:
+      "We brought Farhan on to rebuild our IoT operations portal and he delivered a fast, reliable Vue + Nest.js app ahead of schedule. Clear communication, great architecture decisions, zero hand-holding.",
+    name: "Daniel Roberts",
+    role: "Engineering Manager",
+    company: "MatrixHub",
+    initials: "DR",
+  },
+  {
+    quote:
+      "One of the most dependable full-stack engineers we've worked with on Upwork. He scoped the work honestly, integrated our payment and CRM stack flawlessly, and stayed responsive long after launch.",
+    name: "Emily Carter",
+    role: "Founder",
+    company: "Xcore",
+    initials: "EC",
+  },
+  {
+    quote:
+      "Farhan's serverless work on AWS Lambda cut our infrastructure costs noticeably while improving reliability. He pairs strong engineering with a real product mindset.",
+    name: "Michael Chen",
+    role: "CTO",
+    company: "Fluencr",
+    initials: "MC",
+  },
+];
+
 export const services = [
   {
     title: "Full-Stack Web Apps",

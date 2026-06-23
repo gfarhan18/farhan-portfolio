@@ -19,7 +19,7 @@ export default function ProjectFormPage() {
           <div className="mb-8 flex items-center justify-between gap-4">
             <Link
               href="/"
-              className="text-muted inline-flex text-sm transition-colors hover:text-slate-900 dark:hover:text-white"
+              className="text-muted inline-flex text-sm transition-colors hover:text-stone-900 dark:hover:text-white"
             >
               ← Back to portfolio
             </Link>

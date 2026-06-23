@@ -97,7 +97,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="text-secondary group grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:border-white/25 dark:hover:bg-white/[0.06] dark:hover:text-white"
+                className="text-secondary group grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-transtone-y-0.5 hover:border-stone-300 hover:bg-stone-100 hover:text-stone-900 dark:hover:border-white/25 dark:hover:bg-white/[0.06] dark:hover:text-white"
               >
                 <FaGithub className="h-5 w-5" />
               </a>
@@ -106,14 +106,14 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-secondary group grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-translate-y-0.5 hover:border-[#0a66c2]/60 hover:bg-[#0a66c2]/10 hover:text-[#0a66c2] dark:hover:text-[#54a8ff]"
+                className="text-secondary group grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-transtone-y-0.5 hover:border-[#0a66c2]/60 hover:bg-[#0a66c2]/10 hover:text-[#0a66c2] dark:hover:text-[#54a8ff]"
               >
                 <FaLinkedin className="h-5 w-5" />
               </a>
               <a
                 href={profile.socials.email}
                 aria-label="Email"
-                className="text-secondary group grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-translate-y-0.5 hover:border-brand-400/60 hover:bg-brand-500/10 hover:text-brand-600 dark:hover:text-brand-300"
+                className="text-secondary group grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-transtone-y-0.5 hover:border-brand-400/60 hover:bg-brand-500/10 hover:text-brand-600 dark:hover:text-brand-300"
               >
                 <HiOutlineMail className="h-5 w-5" />
               </a>
@@ -149,9 +149,9 @@ export default function Hero() {
 function HeroVisual() {
   const techChips = [
     { label: "React.js", dot: "bg-cyan-400", className: "left-0 top-[6%]" },
-    { label: "Next.js", dot: "bg-slate-700 dark:bg-white", className: "right-0 top-[10%]" },
+    { label: "Next.js", dot: "bg-stone-700 dark:bg-white", className: "right-0 top-[10%]" },
     { label: "Vue.js", dot: "bg-emerald-400", className: "-right-3 top-[34%]" },
-    { label: "TypeScript", dot: "bg-blue-500", className: "left-1/2 top-0 -translate-x-1/2" },
+    { label: "TypeScript", dot: "bg-blue-500", className: "left-1/2 top-0 -transtone-x-1/2" },
     { label: "Tailwind", dot: "bg-sky-400", className: "-left-2 top-[32%]" },
     { label: "Nest.js", dot: "bg-red-400", className: "left-1 top-[52%]" },
     { label: "Node.js", dot: "bg-green-500", className: "right-1 top-[54%]" },
@@ -183,7 +183,7 @@ function HeroVisual() {
           <span className="text-primary font-display text-5xl font-bold">
             {profile.initials}
           </span>
-          <span className="absolute inset-0 rounded-full ring-1 ring-inset ring-slate-200 dark:ring-white/10" />
+          <span className="absolute inset-0 rounded-full ring-1 ring-inset ring-stone-200 dark:ring-white/10" />
         </div>
       </div>
 

@@ -25,7 +25,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-slate-900 dark:hover:text-white"
+            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-stone-900 dark:hover:text-white"
           >
             <FaGithub className="h-4 w-4" />
           </a>
@@ -34,14 +34,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-slate-900 dark:hover:text-white"
+            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-stone-900 dark:hover:text-white"
           >
             <FaLinkedin className="h-4 w-4" />
           </a>
           <a
             href={profile.socials.email}
             aria-label="Email"
-            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-slate-900 dark:hover:text-white"
+            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-stone-900 dark:hover:text-white"
           >
             <HiOutlineMail className="h-4 w-4" />
           </a>

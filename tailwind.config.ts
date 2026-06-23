@@ -9,29 +9,42 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Warm amber / gold primary — a deliberate move away from the
+        // generic blue→purple palette.
         brand: {
-          50: "#eefcff",
-          100: "#d6f6ff",
-          200: "#aeecff",
-          300: "#76dfff",
-          400: "#38cbff",
-          500: "#0aaeff",
-          600: "#008bdb",
-          700: "#0070b1",
-          800: "#085e91",
-          900: "#0d4f78",
-          950: "#06324e",
+          50: "#fdf6ec",
+          100: "#fae8cd",
+          200: "#f4cf96",
+          300: "#edb45f",
+          400: "#e79e36",
+          500: "#d9821a",
+          600: "#bd6512",
+          700: "#9c4a12",
+          800: "#7f3b15",
+          900: "#693214",
+          950: "#3c1808",
         },
+        // Teal/emerald accent — complementary to the warm primary.
         accent: {
-          500: "#a855f7",
-          600: "#9333ea",
+          50: "#edfcf6",
+          100: "#d2f7e8",
+          200: "#a8edd3",
+          300: "#70ddbb",
+          400: "#37c39d",
+          500: "#13a884",
+          600: "#08866b",
+          700: "#076b58",
+          800: "#085547",
+          900: "#08463b",
+          950: "#022922",
         },
+        // Warm charcoal (stone-tinted) instead of cool blue-black.
         ink: {
-          950: "#05070d",
-          900: "#0a0d18",
-          800: "#101526",
-          700: "#1a2238",
-          600: "#252e4a",
+          950: "#121110",
+          900: "#1a1816",
+          800: "#23211e",
+          700: "#322e2a",
+          600: "#494440",
         },
       },
       fontFamily: {
@@ -40,14 +53,14 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       boxShadow: {
-        glow: "0 0 40px -10px rgba(56, 203, 255, 0.45)",
-        "glow-lg": "0 0 80px -20px rgba(168, 85, 247, 0.55)",
+        glow: "0 0 40px -10px rgba(217, 130, 26, 0.45)",
+        "glow-lg": "0 0 80px -20px rgba(19, 168, 132, 0.5)",
       },
       backgroundImage: {
         "grid-pattern":
           "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
         "radial-fade":
-          "radial-gradient(circle at top, rgba(10, 174, 255, 0.18), transparent 55%)",
+          "radial-gradient(circle at top, rgba(217, 130, 26, 0.18), transparent 55%)",
       },
       keyframes: {
         "fade-up": {

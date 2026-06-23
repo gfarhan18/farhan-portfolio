@@ -26,7 +26,7 @@ export default function ProjectCategoryFilter({
             "rounded-full border px-4 py-2 text-sm font-medium transition-all",
             active === cat.id
               ? "border-brand-500/40 bg-brand-500/15 text-brand-800 dark:border-brand-400/50 dark:bg-brand-500/20 dark:text-white"
-              : "border-subtle surface-faint text-muted hover:border-slate-300 hover:text-slate-900 dark:hover:border-white/20 dark:hover:text-white"
+              : "border-subtle surface-faint text-muted hover:border-stone-300 hover:text-stone-900 dark:hover:border-white/20 dark:hover:text-white"
           )}
         >
           {cat.label}

@@ -25,7 +25,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6 }}
-        className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-subtle bg-gradient-to-br from-white to-slate-50 p-8 backdrop-blur-xl dark:from-white/[0.05] dark:to-white/[0.02] lg:p-14"
+        className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-subtle bg-gradient-to-br from-white to-stone-50 p-8 backdrop-blur-xl dark:from-white/[0.05] dark:to-white/[0.02] lg:p-14"
       >
         <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-brand-500/15 blur-3xl dark:bg-brand-500/20" />
         <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-accent-500/15 blur-3xl dark:bg-accent-500/20" />
@@ -116,7 +116,7 @@ function SocialLink({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="text-secondary grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:border-white/25 dark:hover:bg-white/[0.06] dark:hover:text-white"
+      className="text-secondary grid h-11 w-11 place-items-center rounded-xl border border-subtle surface-faint transition-all hover:-transtone-y-0.5 hover:border-stone-300 hover:bg-stone-100 hover:text-stone-900 dark:hover:border-white/25 dark:hover:bg-white/[0.06] dark:hover:text-white"
     >
       <Icon className="h-5 w-5" />
     </a>
@@ -136,7 +136,7 @@ function InfoCard({
 }) {
   const inner = (
     <>
-      <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-600 ring-1 ring-inset ring-slate-200 dark:text-brand-300 dark:ring-white/10">
+      <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-600 ring-1 ring-inset ring-stone-200 dark:text-brand-300 dark:ring-white/10">
         <Icon className="h-5 w-5" />
       </div>
       <div>
@@ -149,7 +149,7 @@ function InfoCard({
   );
 
   const className =
-    "flex items-center gap-4 rounded-2xl border border-subtle surface-faint p-4 transition-all hover:border-slate-300 hover:bg-slate-100 dark:hover:border-white/20 dark:hover:bg-white/[0.06]";
+    "flex items-center gap-4 rounded-2xl border border-subtle surface-faint p-4 transition-all hover:border-stone-300 hover:bg-stone-100 dark:hover:border-white/20 dark:hover:bg-white/[0.06]";
 
   return href ? (
     <a href={href} className={className}>

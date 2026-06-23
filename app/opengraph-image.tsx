@@ -17,13 +17,13 @@ export default function OgImage() {
           justifyContent: "center",
           padding: "80px",
           background:
-            "linear-gradient(135deg, #05070d 0%, #0a1628 50%, #05070d 100%)",
+            "linear-gradient(135deg, #121110 0%, #2a1d0c 50%, #121110 100%)",
         }}
       >
         <div
           style={{
             fontSize: 28,
-            color: "#38cbff",
+            color: "#e79e36",
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             marginBottom: 24,
@@ -42,7 +42,7 @@ export default function OgImage() {
         >
           M. Farhan
         </div>
-        <div style={{ fontSize: 36, color: "#94a3b8" }}>
+        <div style={{ fontSize: 36, color: "#a8a29e" }}>
           Full Stack Developer · React · Next.js · Nest.js
         </div>
       </div>
