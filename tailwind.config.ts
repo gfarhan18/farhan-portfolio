@@ -88,7 +88,7 @@ const config: Config = {
         "fade-up": "fade-up 0.8s ease-out forwards",
         float: "float 6s ease-in-out infinite",
         "gradient-x": "gradient-x 8s ease infinite",
-        marquee: "marquee 35s linear infinite",
+        marquee: "marquee 120s linear infinite",
         "pulse-ring": "pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
