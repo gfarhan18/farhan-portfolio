@@ -116,8 +116,8 @@ export default function ProjectForm({ isDev }: Props) {
         </h1>
         <p className="text-muted mt-4">
           The project form only works during local development. Edit{" "}
-          <code className="text-brand-600 dark:text-brand-300">data/projects.json</code> and add
-          images to <code className="text-brand-600 dark:text-brand-300">public/projects/</code>,
+          <code className="text-accent">data/projects.json</code> and add
+          images to <code className="text-accent">public/projects/</code>,
           then commit and push to deploy.
         </p>
         <Link href="/" className="btn-primary mt-6 inline-flex">
@@ -183,7 +183,7 @@ export default function ProjectForm({ isDev }: Props) {
       </h1>
       <p className="text-muted mt-2">
         New projects are saved to{" "}
-        <code className="text-brand-600 dark:text-brand-300">data/projects.json</code>.
+        <code className="text-accent">data/projects.json</code>.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-5">
@@ -268,7 +268,7 @@ export default function ProjectForm({ isDev }: Props) {
             <button
               type="button"
               onClick={() => setHighlights((prev) => [...prev, ""])}
-              className="text-sm text-brand-600 hover:text-brand-500 dark:text-brand-300 dark:hover:text-brand-200"
+              className="text-sm text-accent hover:opacity-80"
             >
               + Add highlight
             </button>
@@ -301,7 +301,7 @@ export default function ProjectForm({ isDev }: Props) {
             type="file"
             accept="image/jpeg,image/png,image/webp"
             onChange={(e) => setImage(e.target.files?.[0] ?? null)}
-            className="text-muted w-full text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-brand-500/15 file:px-4 file:py-2 file:text-sm file:font-medium file:text-brand-700 hover:file:bg-brand-500/25 dark:file:bg-brand-500/20 dark:file:text-brand-200 dark:hover:file:bg-brand-500/30"
+            className="text-muted w-full text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-accent-soft file:px-4 file:py-2 file:text-sm file:font-medium file:text-accent-softfg"
           />
         </Field>
 
@@ -346,9 +346,9 @@ function Field({
     <div>
       <label className="text-muted mb-1.5 block text-xs font-medium uppercase tracking-wider">
         {label}
-        {required && <span className="text-brand-600 dark:text-brand-400"> *</span>}
+        {required && <span className="text-accent"> *</span>}
       </label>
-      {hint && <p className="mb-2 text-xs text-stone-500">{hint}</p>}
+      {hint && <p className="mb-2 text-xs text-ink/60">{hint}</p>}
       {children}
     </div>
   );

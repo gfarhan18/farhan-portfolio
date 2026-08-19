@@ -1,24 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Caprasimo, Figtree, JetBrains_Mono } from "next/font/google";
 import ThemeScript from "@/components/ThemeScript";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-const inter = Inter({
+// Organic voice: Caprasimo for display, Figtree for body. globals.css maps
+// these onto --font-heading / --font-body so the token names stay stable.
+const caprasimo = Caprasimo({
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: "400",
+  variable: "--font-caprasimo",
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const figtree = Figtree({
   subsets: ["latin"],
-  variable: "--font-display",
+  weight: ["400", "600", "700"],
+  variable: "--font-figtree",
   display: "swap",
 });
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#121110",
+  themeColor: "#f5ead8",
   width: "device-width",
   initialScale: 1,
 };
@@ -76,7 +80,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`dark ${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable}`}
+      className={`${caprasimo.variable} ${figtree.variable} ${jetbrains.variable}`}
     >
       <body className="relative min-h-screen overflow-x-hidden antialiased">
         <ThemeScript />

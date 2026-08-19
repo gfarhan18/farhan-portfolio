@@ -14,13 +14,15 @@ export default function ThemeToggle({ className = "" }: Props) {
     <button
       type="button"
       onClick={toggleTheme}
-      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      className={`grid h-10 w-10 place-items-center rounded-xl border border-subtle surface-faint text-secondary transition-all hover:-transtone-y-0.5 hover:text-primary ${className}`}
+      aria-label={
+        theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+      }
+      className={`social-tile ${className}`}
     >
       {theme === "dark" ? (
-        <HiOutlineSun className="h-5 w-5" />
+        <HiOutlineSun className="h-[18px] w-[18px]" />
       ) : (
-        <HiOutlineMoon className="h-5 w-5" />
+        <HiOutlineMoon className="h-[18px] w-[18px]" />
       )}
     </button>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineDownload, HiMenuAlt3, HiX } from "react-icons/hi";
 import { profile } from "@/lib/data";
@@ -16,33 +16,21 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "nav-scrolled" : "bg-transparent"
-      }`}
-    >
-      <nav className="container-px flex h-16 items-center justify-between">
+    <header className="nav-scrolled fixed inset-x-0 top-0 z-50">
+      <nav className="container-px flex min-h-[76px] items-center gap-6">
         <a
           href="#top"
-          className="group flex items-center gap-2 font-display text-lg font-bold tracking-tight"
+          className="group mr-auto flex items-center gap-2.5 text-ink"
         >
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-sm font-bold text-white shadow-glow transition-transform group-hover:scale-105">
+          <span className="grid h-10 w-10 place-items-center rounded-full bg-accent-solid font-display text-[15px] text-onaccent transition-transform group-hover:scale-105">
             {profile.initials}
           </span>
-          <span className="text-primary hidden sm:inline-block">
+          <span className="hidden font-display text-[19px] sm:inline-block">
             {profile.firstName}
-            <span className="text-brand-600 dark:text-brand-400">.</span>
+            <span className="text-accent">.</span>
           </span>
         </a>
 
@@ -51,7 +39,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-secondary rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-stone-100 hover:text-stone-900 dark:hover:bg-white/5 dark:hover:text-white"
+                className="block whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-surface hover:text-accent"
               >
                 {link.label}
               </a>
@@ -65,7 +53,7 @@ export default function Navbar() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary !px-5 !py-2 text-sm"
+            className="btn-primary whitespace-nowrap !px-5 !py-2.5 !text-sm"
           >
             <HiOutlineDownload className="h-4 w-4" />
             Resume
@@ -77,9 +65,13 @@ export default function Navbar() {
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((p) => !p)}
-            className="text-primary grid h-10 w-10 place-items-center rounded-xl border border-subtle surface-faint"
+            className="grid h-[42px] w-[42px] place-items-center rounded-xl border border-divider bg-surface text-ink"
           >
-            {open ? <HiX className="h-5 w-5" /> : <HiMenuAlt3 className="h-5 w-5" />}
+            {open ? (
+              <HiX className="h-5 w-5" />
+            ) : (
+              <HiMenuAlt3 className="h-5 w-5" />
+            )}
           </button>
         </div>
       </nav>
@@ -91,21 +83,21 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-subtle bg-white/95 backdrop-blur-xl dark:bg-ink-950/95 md:hidden"
+            className="overflow-hidden border-t border-divider bg-page md:hidden"
           >
-            <ul className="container-px flex flex-col gap-1 py-4">
+            <ul className="container-px flex flex-col pb-5 pt-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     onClick={() => setOpen(false)}
                     href={link.href}
-                    className="text-secondary block rounded-xl px-4 py-3 text-sm font-medium transition-colors hover:bg-stone-100 hover:text-stone-900 dark:hover:bg-white/5 dark:hover:text-white"
+                    className="block border-b border-divider px-1.5 py-3 text-[15px] font-semibold text-ink transition-colors hover:text-accent"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
-              <li className="mt-2">
+              <li className="mt-3">
                 <a
                   href={profile.resumeUrl}
                   target="_blank"

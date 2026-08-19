@@ -13,7 +13,7 @@ export default function Skills() {
         description="A versatile toolbox refined over 5+ years of shipping real products — chosen because they help me move fast without breaking quality."
       />
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
         {skillCategories.map((cat, idx) => (
           <motion.div
             key={cat.title}
@@ -21,33 +21,30 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.55, delay: idx * 0.05 }}
-            className="glass glass-hover relative overflow-hidden p-7"
+            className="rounded-lg bg-surface p-6"
           >
-            <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand-500/10 blur-3xl" />
-            <div className="flex items-baseline justify-between">
-              <h3 className="text-primary font-display text-xl font-bold">
-                {cat.title}
-              </h3>
-              <span className="text-xs font-medium text-stone-500">
+            <div className="flex items-baseline justify-between gap-2.5">
+              <h3 className="font-display text-[17px] text-ink">{cat.title}</h3>
+              <span className="whitespace-nowrap text-[11px] text-ink/[0.55]">
                 {cat.skills.length} tools
               </span>
             </div>
-            <p className="text-muted mt-2 text-sm">{cat.description}</p>
+            <p className="mb-4 mt-1.5 text-[13px] text-ink/[0.68]">
+              {cat.description}
+            </p>
 
-            <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+            <div className="flex flex-wrap gap-1.5">
               {cat.skills.map((skill) => (
-                <div
+                <span
                   key={skill.name}
-                  className="group flex items-center gap-2.5 rounded-xl border border-subtle bg-stone-50 px-3 py-2.5 transition-all hover:-transtone-y-0.5 hover:border-stone-300 hover:bg-white dark:bg-white/[0.02] dark:hover:border-white/20 dark:hover:bg-white/[0.06]"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-accent-solid px-2.5 py-[3px] text-[11px] tracking-[0.02em] text-accent"
                 >
                   <skill.Icon
-                    className="h-5 w-5 shrink-0 transition-transform group-hover:scale-110"
+                    className="h-[11px] w-[11px] shrink-0"
                     style={{ color: skill.color }}
                   />
-                  <span className="text-secondary truncate text-sm font-medium">
-                    {skill.name}
-                  </span>
-                </div>
+                  {skill.name}
+                </span>
               ))}
             </div>
           </motion.div>

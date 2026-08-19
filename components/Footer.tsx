@@ -6,16 +6,15 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-subtle bg-white/60 dark:bg-ink-950/60">
-      <div className="container-px flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
-        <div className="text-muted flex items-center gap-3 text-sm">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand-500 to-accent-500 text-xs font-bold text-white">
+    <footer className="border-t border-divider">
+      <div className="container-px flex flex-wrap items-center justify-between gap-4 py-7">
+        <div className="flex items-center gap-2.5 text-[13px] text-ink/70">
+          <span className="grid h-7 w-7 place-items-center rounded-full bg-accent-solid font-display text-[11px] text-onaccent">
             {profile.initials}
           </span>
           <span>
-            © {year}{" "}
-            <span className="text-secondary font-medium">{profile.name}</span> ·
-            Crafted with Next.js & Tailwind.
+            © {year} <strong className="text-ink">{profile.name}</strong> ·
+            Crafted with Next.js &amp; Tailwind.
           </span>
         </div>
 
@@ -25,25 +24,25 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-stone-900 dark:hover:text-white"
+            className="social-tile !h-[34px] !w-[34px] rounded-[10px]"
           >
-            <FaGithub className="h-4 w-4" />
+            <FaGithub className="h-[15px] w-[15px]" />
           </a>
           <a
             href={profile.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-stone-900 dark:hover:text-white"
+            className="social-tile !h-[34px] !w-[34px] rounded-[10px]"
           >
-            <FaLinkedin className="h-4 w-4" />
+            <FaLinkedin className="h-[15px] w-[15px]" />
           </a>
           <a
             href={profile.socials.email}
             aria-label="Email"
-            className="text-secondary grid h-9 w-9 place-items-center rounded-lg border border-subtle surface-faint transition-colors hover:text-stone-900 dark:hover:text-white"
+            className="social-tile !h-[34px] !w-[34px] rounded-[10px]"
           >
-            <HiOutlineMail className="h-4 w-4" />
+            <HiOutlineMail className="h-[15px] w-[15px]" />
           </a>
         </div>
       </div>

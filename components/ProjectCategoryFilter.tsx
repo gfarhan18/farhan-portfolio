@@ -10,27 +10,29 @@ type Props = {
   counts: Record<ProjectCategory | "all", number>;
 };
 
+/** The design's segmented control: one joined pill, divided by hairlines. */
 export default function ProjectCategoryFilter({
   active,
   onChange,
   counts,
 }: Props) {
   return (
-    <div className="mb-8 flex flex-wrap gap-2">
-      {PROJECT_CATEGORIES.map((cat) => (
+    <div className="mb-9 inline-flex max-w-full flex-wrap overflow-hidden rounded-full border border-divider">
+      {PROJECT_CATEGORIES.map((cat, i) => (
         <button
           key={cat.id}
           type="button"
           onClick={() => onChange(cat.id)}
+          aria-pressed={active === cat.id}
           className={clsx(
-            "rounded-full border px-4 py-2 text-sm font-medium transition-all",
+            "px-3.5 py-[7px] text-[13px] transition-colors",
+            i > 0 && "border-l border-divider",
             active === cat.id
-              ? "border-brand-500/40 bg-brand-500/15 text-brand-800 dark:border-brand-400/50 dark:bg-brand-500/20 dark:text-white"
-              : "border-subtle surface-faint text-muted hover:border-stone-300 hover:text-stone-900 dark:hover:border-white/20 dark:hover:text-white"
+              ? "bg-accent-solid text-onaccent"
+              : "text-ink hover:bg-surface"
           )}
         >
-          {cat.label}
-          <span className="ml-1.5 text-xs opacity-60">({counts[cat.id]})</span>
+          {cat.label} ({counts[cat.id]})
         </button>
       ))}
     </div>

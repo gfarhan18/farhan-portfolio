@@ -9,22 +9,22 @@ export default function Marquee() {
   return (
     <section
       aria-hidden
-      className="relative mt-8 overflow-hidden border-y border-subtle bg-stone-100/50 py-5 lg:mt-10 dark:bg-white/[0.015]"
+      className="relative overflow-hidden border-y border-divider py-[18px]"
     >
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-stone-50 to-transparent dark:from-ink-950" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-stone-50 to-transparent dark:from-ink-950" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-page to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-page to-transparent" />
 
       <div className="flex w-max animate-marquee gap-10">
         {items.map((s, i) => (
           <div
             key={`${s.name}-${i}`}
-            className="text-muted flex shrink-0 items-center gap-2.5"
+            className="flex shrink-0 items-center gap-2.5 text-ink/[0.55]"
           >
-            <s.Icon className="h-5 w-5" style={{ color: s.color }} />
-            <span className="whitespace-nowrap text-sm font-medium">
+            <s.Icon className="h-[18px] w-[18px]" style={{ color: s.color }} />
+            <span className="whitespace-nowrap text-sm font-semibold">
               {s.name}
             </span>
-            <span className="text-stone-300 dark:text-stone-700">•</span>
+            <span className="h-1 w-1 rounded-full bg-accent-solid" />
           </div>
         ))}
       </div>

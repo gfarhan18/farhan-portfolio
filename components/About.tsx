@@ -26,51 +26,45 @@ export default function About() {
         description="Full-stack delivery with modern AI in the loop — from intelligent product features to faster, higher-quality shipping."
       />
 
-      <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
+      <div className="grid items-start gap-9 lg:grid-cols-[1.1fr_1fr]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="glass p-8 lg:p-10"
+          className="rounded-[32px] bg-surface p-7 sm:p-9"
         >
-          <p className="text-secondary text-base leading-relaxed lg:text-lg">
-            I&apos;m{" "}
-            <span className="text-primary font-semibold">{profile.name}</span>, a
-            Full Stack Developer based in {profile.location} with{" "}
-            <span className="text-primary font-semibold">
-              5+ years of hands-on experience
-            </span>{" "}
+          <p className="text-base leading-[1.65] text-ink">
+            <span className="font-bold">{profile.name}</span>, a Full Stack
+            Developer based in {profile.location} with{" "}
+            <span className="font-bold">5+ years of hands-on experience</span>{" "}
             shipping production software for international clients.
           </p>
-          <p className="text-muted mt-5 text-base leading-relaxed">
-            I&apos;ve partnered with teams across the US, EU and APAC — including
-            <span className="text-primary"> Acudocx</span>,
-            <span className="text-primary"> Xcore</span>,
-            <span className="text-primary"> Matrix Hub</span> and
-            <span className="text-primary"> Fluencr</span> — delivering full
+          <p className="mt-4 text-[15px] leading-[1.65] text-ink/[0.78]">
+            I&apos;ve partnered with teams across the US, EU and APAC —
+            including Acudocx, Xcore, Matrix Hub and Fluencr — delivering full
             product lifecycles: from requirement gathering and architecture, to
             development, deployment and ongoing maintenance.
           </p>
-          <p className="text-muted mt-5 text-base leading-relaxed">
+          <p className="mt-4 text-[15px] leading-[1.65] text-ink/[0.78]">
             My sweet spot is{" "}
-            <span className="text-brand-600 dark:text-brand-300">
+            <span className="font-semibold text-accent">
               React / Next.js + Nest.js + AWS
             </span>
             , with strong Vue.js and PHP experience. I use AI tools daily for
-            prototyping, refactors, and shipping features like{" "}
-            <span className="text-primary">document intelligence on Acudocx</span>
-            — so teams move faster without cutting corners.
+            prototyping, refactors, and shipping features like document
+            intelligence on Acudocx — so teams move faster without cutting
+            corners.
           </p>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="mt-7 grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-2.5">
             <Pill label="English" value="Professional" />
             <Pill label="Timezone" value="GMT+5 · flexible" />
-            <Pill label="Engagement" value="Hourly / Project / Retainer" />
+            <Pill label="Engagement" value="Hourly / Project" />
           </div>
         </motion.div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3.5">
           {services.map((s, i) => {
             const Icon = iconMap[s.icon as keyof typeof iconMap];
             return (
@@ -80,15 +74,15 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="glass glass-hover p-6"
+                className="glass-hover rounded-lg bg-surface p-[22px]"
               >
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-brand-600 ring-1 ring-inset ring-stone-200 dark:text-brand-300 dark:ring-white/10">
-                  <Icon className="h-5 w-5" />
+                <div className="icon-tile">
+                  <Icon className="h-[19px] w-[19px]" />
                 </div>
-                <h3 className="text-primary mt-4 font-display text-lg font-semibold">
+                <h3 className="mt-3.5 font-display text-base text-ink">
                   {s.title}
                 </h3>
-                <p className="text-muted mt-2 text-sm leading-relaxed">
+                <p className="mt-1.5 text-[13px] leading-[1.55] text-ink/70">
                   {s.description}
                 </p>
               </motion.div>
@@ -102,11 +96,11 @@ export default function About() {
 
 function Pill({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-subtle surface-faint px-4 py-3">
-      <div className="text-muted text-[10px] font-medium uppercase tracking-wider">
+    <div className="rounded-md border border-divider px-3.5 py-3">
+      <div className="text-[10px] uppercase tracking-[0.06em] text-ink/60">
         {label}
       </div>
-      <div className="text-primary mt-1 text-sm font-semibold">{value}</div>
+      <div className="mt-[3px] text-sm font-semibold text-ink">{value}</div>
     </div>
   );
 }

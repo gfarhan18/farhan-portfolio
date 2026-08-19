@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <main className="grid min-h-screen place-items-center px-6">
       <div className="text-center">
-        <p className="font-mono text-sm text-brand-600 dark:text-brand-400">
+        <p className="font-mono text-sm text-accent">
           404
         </p>
         <h1 className="text-primary mt-3 font-display text-5xl font-bold">

@@ -1,5 +1,11 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * "Organic" design system — warm cream ground, terracotta accent, olive
+ * secondary, Caprasimo display + Figtree body. Semantic roles are CSS
+ * variables (swapped for dark mode in globals.css); the tonal ramps are
+ * static so they can be reached directly when a specific step is wanted.
+ */
 const config: Config = {
   darkMode: "class",
   content: [
@@ -9,58 +15,70 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Warm amber / gold primary — a deliberate move away from the
-        // generic blue→purple palette.
-        brand: {
-          50: "#fdf6ec",
-          100: "#fae8cd",
-          200: "#f4cf96",
-          300: "#edb45f",
-          400: "#e79e36",
-          500: "#d9821a",
-          600: "#bd6512",
-          700: "#9c4a12",
-          800: "#7f3b15",
-          900: "#693214",
-          950: "#3c1808",
-        },
-        // Teal/emerald accent — complementary to the warm primary.
+        // Semantic roles — theme-aware.
+        page: "rgb(var(--color-bg) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        surface2: "rgb(var(--color-surface-2) / <alpha-value>)",
+        ink: "rgb(var(--color-text) / <alpha-value>)",
+        divider: "var(--color-divider)",
+        onaccent: "rgb(var(--color-on-accent) / <alpha-value>)",
         accent: {
-          50: "#edfcf6",
-          100: "#d2f7e8",
-          200: "#a8edd3",
-          300: "#70ddbb",
-          400: "#37c39d",
-          500: "#13a884",
-          600: "#08866b",
-          700: "#076b58",
-          800: "#085547",
-          900: "#08463b",
-          950: "#022922",
+          DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
+          solid: "rgb(var(--color-accent-solid) / <alpha-value>)",
+          soft: "rgb(var(--color-accent-soft-bg) / <alpha-value>)",
+          softfg: "rgb(var(--color-accent-soft-text) / <alpha-value>)",
+          100: "#fff2eb",
+          200: "#ffe1d0",
+          300: "#ffc6a5",
+          400: "#f6a06b",
+          500: "#d67f48",
+          600: "#b2622d",
+          700: "#8c491a",
+          800: "#643312",
+          900: "#402310",
         },
-        // Warm charcoal (stone-tinted) instead of cool blue-black.
-        ink: {
-          950: "#121110",
-          900: "#1a1816",
-          800: "#23211e",
-          700: "#322e2a",
-          600: "#494440",
+        olive: {
+          DEFAULT: "rgb(var(--color-accent-2) / <alpha-value>)",
+          solid: "rgb(var(--color-accent-2-solid) / <alpha-value>)",
+          soft: "rgb(var(--color-accent-2-soft-bg) / <alpha-value>)",
+          softfg: "rgb(var(--color-accent-2-soft-text) / <alpha-value>)",
+          100: "#f0fae1",
+          200: "#e1eecc",
+          300: "#ccdbb2",
+          400: "#aebf92",
+          500: "#8fa073",
+          600: "#728157",
+          700: "#56633f",
+          800: "#3d472b",
+          900: "#272e1b",
+        },
+        neutral: {
+          100: "#f9f4ed",
+          200: "#eee7db",
+          300: "#dcd3c4",
+          400: "#c0b6a5",
+          500: "#a19786",
+          600: "#82796a",
+          700: "#645c50",
+          800: "#474238",
+          900: "#2e2b25",
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        display: ["var(--font-heading)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
-      boxShadow: {
-        glow: "0 0 40px -10px rgba(217, 130, 26, 0.45)",
-        "glow-lg": "0 0 80px -20px rgba(19, 168, 132, 0.5)",
+      borderRadius: {
+        sm: "8px",
+        md: "16px",
+        lg: "28px",
+        xl: "32px",
       },
-      backgroundImage: {
-        "grid-pattern":
-          "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
-        "radial-fade":
-          "radial-gradient(circle at top, rgba(217, 130, 26, 0.18), transparent 55%)",
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
       },
       keyframes: {
         "fade-up": {
@@ -70,10 +88,6 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-12px)" },
-        },
-        "gradient-x": {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
         },
         marquee: {
           "0%": { transform: "translateX(0%)" },
@@ -87,7 +101,6 @@ const config: Config = {
       animation: {
         "fade-up": "fade-up 0.8s ease-out forwards",
         float: "float 6s ease-in-out infinite",
-        "gradient-x": "gradient-x 8s ease infinite",
         marquee: "marquee 120s linear infinite",
         "pulse-ring": "pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
