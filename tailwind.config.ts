@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 /**
  * "Organic" design system — warm cream ground, terracotta accent, olive
- * secondary, Caprasimo display + Figtree body. Semantic roles are CSS
+ * secondary, Fraunces display + Figtree body. Semantic roles are CSS
  * variables (swapped for dark mode in globals.css); the tonal ramps are
  * static so they can be reached directly when a specific step is wanted.
  */

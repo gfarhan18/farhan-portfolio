@@ -27,7 +27,7 @@
   --color-blob-1: #e1eecc;
   --color-blob-2: #ffe1d0;
 
-  --font-heading: var(--font-caprasimo), Georgia, system-ui, serif;
+  --font-heading: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
   --font-body: var(--font-figtree), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", monospace;
 
@@ -128,7 +128,7 @@ h6 {
   }
 
   .heading {
-    @apply font-display text-[clamp(26px,3.6vw,36px)] text-ink;
+    @apply font-display text-[clamp(26px,3.6vw,36px)] font-semibold tracking-[-0.02em] text-ink;
   }
 
   .subheading {

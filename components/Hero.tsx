@@ -50,7 +50,7 @@ export default function Hero() {
 
           <motion.h1
             variants={item}
-            className="mt-[22px] max-w-[14ch] font-display text-[clamp(38px,6vw,64px)] leading-[1.06] text-ink"
+            className="mt-[22px] max-w-[14ch] font-display text-[clamp(38px,6vw,64px)] font-semibold leading-[1.06] tracking-[-0.02em] text-ink"
           >
             Hi, I&apos;m {profile.firstName}. I build and ship with{" "}
             <span className="text-accent">AI + full stack</span>.

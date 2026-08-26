@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Caprasimo, Figtree, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Figtree, JetBrains_Mono } from "next/font/google";
 import ThemeScript from "@/components/ThemeScript";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
-// Organic voice: Caprasimo for display, Figtree for body. globals.css maps
+// Organic voice: Fraunces for display, Figtree for body. globals.css maps
 // these onto --font-heading / --font-body so the token names stay stable.
-const caprasimo = Caprasimo({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-caprasimo",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -80,7 +80,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${caprasimo.variable} ${figtree.variable} ${jetbrains.variable}`}
+      className={`${fraunces.variable} ${figtree.variable} ${jetbrains.variable}`}
     >
       <body className="relative min-h-screen overflow-x-hidden antialiased">
         <ThemeScript />
