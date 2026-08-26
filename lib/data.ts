@@ -122,7 +122,7 @@ export const profile = {
   resumeUrl: "/Farhan-resume-latest.pdf",
   socials: {
     github: "https://github.com/gfarhan18",
-    linkedin: "https://www.linkedin.com/in/muhammad-farhan-16033019b/",
+    linkedin: "https://www.linkedin.com/in/m-farhan-16033019b/",
     upwork: "https://www.upwork.com/",
     email: "mailto:gfarhan18@gmail.com",
   },
