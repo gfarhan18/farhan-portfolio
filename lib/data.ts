@@ -120,12 +120,44 @@ export const profile = {
   availability: "Available for freelance & remote roles worldwide",
   email: "gfarhan18@gmail.com",
   resumeUrl: "/Farhan-resume-latest.pdf",
+  website: "https://farhan-portfolio-mocha.vercel.app",
   socials: {
     github: "https://github.com/gfarhan18",
     linkedin: "https://www.linkedin.com/in/m-farhan-16033019b/",
     upwork: "https://www.upwork.com/",
     email: "mailto:gfarhan18@gmail.com",
   },
+  /** Links shown in Contact for open + copy (job apps & client outreach). */
+  quickLinks: [
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      display: "linkedin.com/in/m-farhan-16033019b",
+      href: "https://www.linkedin.com/in/m-farhan-16033019b/",
+      copyValue: "https://www.linkedin.com/in/m-farhan-16033019b/",
+    },
+    {
+      id: "github",
+      label: "GitHub",
+      display: "github.com/gfarhan18",
+      href: "https://github.com/gfarhan18",
+      copyValue: "https://github.com/gfarhan18",
+    },
+    {
+      id: "portfolio",
+      label: "Portfolio",
+      display: "farhan-portfolio-mocha.vercel.app",
+      href: "https://farhan-portfolio-mocha.vercel.app",
+      copyValue: "https://farhan-portfolio-mocha.vercel.app",
+    },
+    {
+      id: "email",
+      label: "Email",
+      display: "gfarhan18@gmail.com",
+      href: "mailto:gfarhan18@gmail.com",
+      copyValue: "gfarhan18@gmail.com",
+    },
+  ],
   stats: [
     { label: "Years Experience", value: "5+" },
     { label: "Projects Delivered", value: "40+" },

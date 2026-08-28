@@ -6,10 +6,19 @@ import {
   HiOutlineLocationMarker,
   HiOutlineClock,
   HiOutlineDownload,
+  HiOutlineExternalLink,
 } from "react-icons/hi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
+import CopyButton from "./CopyButton";
 import { profile } from "@/lib/data";
+
+const linkIcons = {
+  linkedin: FaLinkedin,
+  github: FaGithub,
+  portfolio: FaGlobe,
+  email: HiOutlineMail,
+} as const;
 
 export default function Contact() {
   return (
@@ -32,7 +41,7 @@ export default function Contact() {
           className="pointer-events-none absolute -bottom-24 -left-24 h-60 w-60 rounded-full bg-olive-soft opacity-50"
         />
 
-        <div className="relative z-10 grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
+        <div className="relative z-10 grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]">
           <div>
             <h3 className="font-display text-[clamp(24px,3vw,32px)] text-ink">
               Let&apos;s build something{" "}
@@ -77,25 +86,73 @@ export default function Contact() {
                 Icon={HiOutlineMail}
               />
             </div>
+
+            <div className="mt-8 grid gap-2.5 sm:grid-cols-2">
+              <MetaPill
+                Icon={HiOutlineLocationMarker}
+                title="Based in"
+                value={`${profile.location} · global`}
+              />
+              <MetaPill
+                Icon={HiOutlineClock}
+                title="Availability"
+                value={profile.availability}
+              />
+            </div>
           </div>
 
-          <div className="grid gap-2.5">
-            <InfoCard
-              Icon={HiOutlineMail}
-              title="Email"
-              value={profile.email}
-              href={profile.socials.email}
-            />
-            <InfoCard
-              Icon={HiOutlineLocationMarker}
-              title="Based in"
-              value={`${profile.location} · working globally`}
-            />
-            <InfoCard
-              Icon={HiOutlineClock}
-              title="Availability"
-              value={profile.availability}
-            />
+          <div>
+            <div className="mb-3 flex items-end justify-between gap-3">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-accent">
+                  Quick links
+                </p>
+                <p className="mt-1 text-[13px] text-ink/60">
+                  Open or copy — handy for applications and intros.
+                </p>
+              </div>
+            </div>
+
+            <ul className="grid gap-2">
+              {profile.quickLinks.map((link) => {
+                const Icon =
+                  linkIcons[link.id as keyof typeof linkIcons] ?? FaGlobe;
+                const isExternal = link.href.startsWith("http");
+
+                return (
+                  <li
+                    key={link.id}
+                    className="flex items-center gap-2 rounded-md bg-page px-3 py-2.5 transition-colors hover:bg-surface2"
+                  >
+                    <a
+                      href={link.href}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noopener noreferrer" : undefined}
+                      className="flex min-w-0 flex-1 items-center gap-3 text-ink"
+                    >
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent-soft text-accent">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-[10px] uppercase tracking-[0.06em] text-ink/55">
+                          {link.label}
+                        </span>
+                        <span className="block truncate text-sm font-semibold">
+                          {link.display}
+                        </span>
+                      </span>
+                      {isExternal && (
+                        <HiOutlineExternalLink
+                          className="ml-auto hidden h-3.5 w-3.5 shrink-0 text-ink/35 sm:block"
+                          aria-hidden
+                        />
+                      )}
+                    </a>
+                    <CopyButton value={link.copyValue} label={link.label} />
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </motion.div>
@@ -125,40 +182,28 @@ function SocialLink({
   );
 }
 
-function InfoCard({
+function MetaPill({
   Icon,
   title,
   value,
-  href,
 }: {
   Icon: React.ComponentType<{ className?: string }>;
   title: string;
   value: string;
-  href?: string;
 }) {
-  const inner = (
-    <>
-      <span className="grid h-[38px] w-[38px] shrink-0 place-items-center rounded-full bg-accent-soft text-accent">
-        <Icon className="h-4 w-4" />
+  return (
+    <div className="flex items-center gap-3 rounded-md bg-page px-3.5 py-3">
+      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-accent-soft text-accent">
+        <Icon className="h-3.5 w-3.5" />
       </span>
-      <span>
-        <span className="block text-[10px] uppercase tracking-[0.06em] text-ink/60">
+      <span className="min-w-0">
+        <span className="block text-[10px] uppercase tracking-[0.06em] text-ink/55">
           {title}
         </span>
-        <span className="block text-sm font-semibold text-ink">{value}</span>
+        <span className="block truncate text-[13px] font-semibold text-ink">
+          {value}
+        </span>
       </span>
-    </>
-  );
-
-  // Cards sit on the section surface, so they use the page ground to separate.
-  const className =
-    "flex items-center gap-3.5 rounded-md bg-page px-4 py-3.5 text-ink transition-colors hover:bg-surface2";
-
-  return href ? (
-    <a href={href} className={className}>
-      {inner}
-    </a>
-  ) : (
-    <div className={className}>{inner}</div>
+    </div>
   );
 }

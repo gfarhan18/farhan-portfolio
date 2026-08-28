@@ -27,7 +27,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://farhan.dev"),
+  metadataBase: new URL("https://farhan-portfolio-mocha.vercel.app"),
   title: {
     default: "M. Farhan · Full Stack & AI-Enabled Developer",
     template: "%s · M. Farhan",
