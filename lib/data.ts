@@ -157,6 +157,14 @@ export const profile = {
       href: "mailto:gfarhan18@gmail.com",
       copyValue: "gfarhan18@gmail.com",
     },
+    {
+      id: "video",
+      label: "Video Resume",
+      display: "drive.google.com — video resume",
+      href: "https://drive.google.com/file/d/1kWJ2DjDzaU1AxZm0Mzv-38Iu_yC4-8Gv/view?usp=drive_link",
+      copyValue:
+        "https://drive.google.com/file/d/1kWJ2DjDzaU1AxZm0Mzv-38Iu_yC4-8Gv/view?usp=drive_link",
+    },
   ],
   stats: [
     { label: "Years Experience", value: "5+" },

@@ -7,6 +7,7 @@ import {
   HiOutlineClock,
   HiOutlineDownload,
   HiOutlineExternalLink,
+  HiOutlineVideoCamera,
 } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
@@ -18,6 +19,7 @@ const linkIcons = {
   github: FaGithub,
   portfolio: FaGlobe,
   email: HiOutlineMail,
+  video: HiOutlineVideoCamera,
 } as const;
 
 export default function Contact() {
